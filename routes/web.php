@@ -22,10 +22,10 @@ Route::group(['middleware' => ['web']], function () {
     });
 
     Route::get('/movies', 'MovieController@index');
-    Route::post('/movies', 'MovieController@store');
-    Route::delete('/movies/{movie_id}', 'MovieController@destroy');
+    Route::post('/movie', 'MovieController@store');
+    Route::delete('/movie/{movie_id}', 'MovieController@destroy');
 
-    Route::get('/movies/edit/{movie_id}', 'MovieController@edit');
+    Route::get('/movies/new', 'MovieController@new');
     Route::get('/movies/{movie_id}', 'MovieController@update');
   
 });

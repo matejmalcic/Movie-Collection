@@ -4,18 +4,19 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class Movie extends Migration
+class Movies extends Migration
 {
     /**
      * Run the migrations.
      *
      * @return void
      */
-    public function up()
+    public function up() //vjv cu morati migrate:(re)fresh 
     {
-        Schema::create('movie', function (Blueprint $table) {
+        Schema::create('movies', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
+            $table->integer('user_id')->index();
             $table->integer('genre_id')->index();
             $table->integer('year');
             $table->integer('duration');
@@ -30,6 +31,6 @@ class Movie extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('movie');
+        Schema::dropIfExists('movies');
     }
 }

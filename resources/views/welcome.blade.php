@@ -85,8 +85,8 @@
                 </div>
 
                 <div class="links">
-                    <a href="/">Movie List</a>
-                    <a href="/">Insert new movie</a>
+                    <a href="{{url('movies')}}">Movie List</a>
+                    <a href="{{url('movies/new')}}">Insert new movie</a>
 
                 </div>
             </div>
