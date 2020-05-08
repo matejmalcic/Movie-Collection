@@ -18,6 +18,7 @@
 
                     <div class="links">
                     <a href="{{url('movies')}}">Movie List</a>
+                    <a href="{{url('movies/userlist/' . Auth::user()->id )}}">My Movies</a>
                     <a href="{{url('movies/new')}}">Insert new movie</a>
 
                     </div>

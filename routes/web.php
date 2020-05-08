@@ -26,7 +26,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::delete('/movie/{movie_id}', 'MovieController@destroy');
 
     Route::get('/movies/new', 'MovieController@new');
-    Route::get('/movies/{movie_id}', 'MovieController@update');
+    Route::get('/movies/userlist/{user_id}', 'MovieController@userlist');
   
 });
 

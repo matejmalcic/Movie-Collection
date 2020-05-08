@@ -7,7 +7,7 @@
                     <div class="panel-heading">
                         Movie List
                         <br>
-                        <a href="{{url('movies/userlist/' . Auth::user()->id )}}">My Movies</a>
+                        <a href="{{url('movies')}}">All movies</a>
                         <a href="{{url('movies/new')}}">Add new movie</a>
                     </div>
 

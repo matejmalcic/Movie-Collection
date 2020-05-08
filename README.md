@@ -1,8 +1,13 @@
 ## First Laravel Project
 ## Movie Collection
 
-Tasks:
--finish form for adding new movies
--moive list pages for non-reg and registered users
--fix delete movie function
-....
+Tasks:  
+-form for adding new movies  
+-user movie list page and all movie list page -done  
+-fill in genre table in DB  
+-delete movie option  
+-alphabet for listing movies with starting letter  
+-search  
+...  
+
+
