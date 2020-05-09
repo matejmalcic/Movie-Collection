@@ -13,7 +13,7 @@ class MovieRepository
     } 
 
     //treba testirati
-    public function forAll(User $user)
+    public function forAll()
     {
         return Movie::where('id', '<>', 0) -> orderBy('title', 'asc') -> get();
     } 

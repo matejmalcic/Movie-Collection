@@ -1,18 +1,18 @@
 @extends('layouts.app')
 
 @section('content')
-
-	@if (count($movies) > 0)
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        Movie List
-                        <br>
-                        <a href="{{url('movies/userlist/' . Auth::user()->id )}}">My Movies</a>
-                        <a href="{{url('movies/new')}}">Add new movie</a>
-                    </div>
-
-                    <div class="panel-body">
-                        <table class="table table-striped task-table">
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Movie List</h4> 
+                    <a class="btn" href="{{url('movies/userlist/' . Auth::user()->id )}}">My Movies</a>
+                    <a class="btn" href="{{url('movies/new')}}">Add new movie</a>
+                </div>
+                @if (count($movies) > 0)
+                <div class="card-body">
+                <table class="table table-striped task-table">
                             <thead>
                                 <th>Image</th>
                                 <th>Title</th>
@@ -24,7 +24,7 @@
                             <tbody>
                                 @foreach ($movies as $movie)
                                     <tr>
-                                        <td class="table-text"><div></div></td>
+                                        <td class="table-text"><div><img style="max-width: 200px" src="" alt="image"> </div></td>
                                         <td class="table-text"><div>{{ $movie->title }}</div></td>
                                         <td class="table-text"><div>{{ $movie->genre_id }}</div></td>
                                         <td class="table-text"><div>{{ $movie->year }}</div></td>
@@ -45,7 +45,10 @@
                                 @endforeach
                             </tbody>
                         </table>
-                    </div>
                 </div>
-            @endif
+                @endif
+            </div>
+        </div>
+    </div>
+</div>
 @endsection

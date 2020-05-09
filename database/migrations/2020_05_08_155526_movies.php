@@ -11,16 +11,26 @@ class Movies extends Migration
      *
      * @return void
      */
-    public function up() //vjv cu morati migrate:(re)fresh 
+    public function up() 
     {
         Schema::create('movies', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->integer('user_id')->index();
-            $table->integer('genre_id')->index();
+            $table->unsignedInteger('user_id')->index();
+            $table->unsignedInteger('genre_id')->index();
             $table->integer('year');
             $table->integer('duration');
-            $table->string('image');
+            $table->string('image'); //->default(''); napraviti BP do public/upload/unnamed ->migrate
+
+            $table->foreign('user_id')
+                ->references('id')
+                ->on('users')
+                ->onDelete('cascade');
+
+            $table->foreign('genre_id')
+                ->references('id')
+                ->on('genres')
+                ->onDelete('cascade');
         }); 
     }
 

@@ -22,7 +22,7 @@ Route::group(['middleware' => ['web']], function () {
     });
 
     Route::get('/movies', 'MovieController@index');
-    Route::post('/movie', 'MovieController@store');
+    Route::post('/movie', 'MovieController@add');
     Route::delete('/movie/{movie_id}', 'MovieController@destroy');
 
     Route::get('/movies/new', 'MovieController@new');

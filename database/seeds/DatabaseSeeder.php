@@ -11,6 +11,22 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
+        //$this->call(GenresSeeder::class); 
+        DB::table('genres')->insert([
+            ['name' => 'Action'], 
+            ['name' => 'Adventure'], 
+            ['name' => 'Comedy'],
+            ['name' => 'Crime'],
+            ['name' => 'Drama'],
+            ['name' => 'Fantasy'],
+            ['name' => 'History'],
+            ['name' => 'Horor'],
+            ['name' => 'Mystery'],
+            ['name' => 'Romance'],
+            ['name' => 'SF'],
+            ['name' => 'Thriller'],
+            ['name' => 'Western'],
+        ]);
+        
     }
 }
