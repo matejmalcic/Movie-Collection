@@ -51,9 +51,10 @@ class MovieController extends Controller
             'user_id' => Auth::user()->id,
             'year' => $request->year,
             'duration' => $request->duration,
-            'image' => $request->image,
+            'image' => $request->image->getClientOriginalName(),
         ]);
         
+        $request->image->storeAs('images', $request->image->getClientOriginalName());
 
         return redirect('/movies');
     }

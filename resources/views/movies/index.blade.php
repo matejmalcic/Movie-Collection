@@ -12,6 +12,9 @@
                 </div>
                 @if (count($movies) > 0)
                 <div class="card-body">
+                <div class="links">
+                    <!-- Alphabetical paging -->
+                </div>
                 <table class="table table-striped task-table">
                             <thead>
                                 <th>Image</th>
@@ -24,11 +27,11 @@
                             <tbody>
                                 @foreach ($movies as $movie)
                                     <tr>
-                                        <td class="table-text"><div><img style="max-width: 200px" src="" alt="image"> </div></td>
-                                        <td class="table-text"><div>{{ $movie->title }}</div></td>
-                                        <td class="table-text"><div>{{ $movie->genre_id }}</div></td>
-                                        <td class="table-text"><div>{{ $movie->year }}</div></td>
-                                        <td class="table-text"><div>{{ $movie->duration }}</div></td>
+                                        <td><div><img style="max-width: 200px" src="{{ asset('storage/images/'. $movie->image) }}"> </div></td>
+                                        <td>{{ $movie->title }}</td>
+                                        <td>{{ $movie->genre_id }}</td>
+                                        <td>{{ $movie->year }}</td>
+                                        <td>{{ $movie->duration }}</td>
 
                                          <!-- Movie Delete Button -->
                                         <td>                                            

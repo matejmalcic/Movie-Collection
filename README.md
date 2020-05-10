@@ -6,9 +6,12 @@ Tasks:
 -user movie list page and all movie list page -done  
 -fill in genre table in DB -done  
 -delete movie option  
--alphabet for listing movies with starting letter  
+-alphabetical pagination  
 -search  
 -authorization for non registered users  
+-genre name not ID  
+-connect index.blade and uselist.blade into one and through controller send  
+send different data  
 ...  
 
 

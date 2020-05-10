@@ -24,7 +24,7 @@
                             <tbody>
                                 @foreach ($movies as $movie)
                                     <tr>
-                                        <td class="table-text"><div><img style="max-width: 200px" src="" alt="image"> </div></td>
+                                        <td><div><img style="max-width: 200px" src="{{ asset('storage/images/'. $movie->image) }}"> </div></td>
                                         <td class="table-text"><div>{{ $movie->title }}</div></td>
                                         <td class="table-text"><div>{{ $movie->genre_id }}</div></td>
                                         <td class="table-text"><div>{{ $movie->year }}</div></td>
