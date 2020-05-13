@@ -1,14 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
-        <div class="col-sm-offset-2 col-sm-8">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    Add new movie
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Add new movie</h4> 
+                    <a class="btn" href="{{url('movies')}}">All Movies</a>
+                    <a class="btn" href="{{url('movies/userlist/' . Auth::user()->id )}}">My Movies</a>
                 </div>
-
-                <div class="panel-body">
+                <div class="card-body">
                     <!-- Display Validation Errors -->
                     @include('common.errors')
 
@@ -54,7 +56,7 @@
                         <div class="form-group">
                             <label for="movie-duration" class="col-sm-3 control-label">Duration in minutes</label>
                             <div class="col-sm-6">
-                                <input type="number" name="duration" id="movie-duration" class="form-control">
+                                <input type="number" name="duration" id="movie-duration" min="0" class="form-control">
                             </div>
                         </div> 
 
@@ -79,4 +81,5 @@
             </div>
         </div>
     </div>
+</div>
 @endsection

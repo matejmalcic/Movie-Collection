@@ -12,9 +12,8 @@ class MovieRepository
         return Movie::where('user_id', $user->id) -> orderBy('title', 'asc') -> get();
     } 
 
-    //treba testirati
     public function forAll()
     {
-        return Movie::where('id', '<>', 0) -> orderBy('title', 'asc') -> get();
+        return Movie::orderBy('title', 'asc') -> get();
     } 
 }

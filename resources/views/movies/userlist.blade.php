@@ -24,14 +24,14 @@
                             <tbody>
                                 @foreach ($movies as $movie)
                                     <tr>
-                                        <td><div><img style="max-width: 200px" src="{{ asset('storage/images/'. $movie->image) }}"> </div></td>
-                                        <td class="table-text"><div>{{ $movie->title }}</div></td>
-                                        <td class="table-text"><div>{{ $movie->genre_id }}</div></td>
-                                        <td class="table-text"><div>{{ $movie->year }}</div></td>
-                                        <td class="table-text"><div>{{ $movie->duration }}</div></td>
+                                        <td><div><img src="{{ asset('storage/images/'. $movie->image) }}" height="180" width="150"> </div></td>
+                                        <td class="table-text" style="vertical-align: inherit"><div>{{ $movie->title }}</div></td>
+                                        <td class="table-text" style="vertical-align: inherit"><div>{{ $movie->genre_id }}</div></td>
+                                        <td class="table-text" style="vertical-align: inherit"><div>{{ $movie->year }}</div></td>
+                                        <td class="table-text" style="vertical-align: inherit"><div>{{ $movie->duration }}</div></td>
 
                                          <!-- Movie Delete Button -->
-                                        <td>                                            
+                                        <td style="vertical-align: inherit">                                            
                                             <form action="{{url('movie/' . $movie->id)}}" method="POST">
                                                 {{ csrf_field() }}
                                                 {{ method_field('DELETE') }}

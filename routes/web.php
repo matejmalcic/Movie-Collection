@@ -23,11 +23,12 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/movies', 'MovieController@index');
     Route::post('/movie', 'MovieController@add');
-    Route::delete('/movie/{movie_id}', 'MovieController@destroy');
+    Route::delete('/movie/{movie}', 'MovieController@destroy');
+    Route::post('/genre', 'MovieController@addGenre');
 
     Route::get('/movies/new', 'MovieController@new');
     Route::get('/movies/userlist/{user_id}', 'MovieController@userlist');
-  
+    Route::get('/genre', 'MovieController@genre');
 });
 
 Route::get('/home', 'HomeController@index')->name('home');

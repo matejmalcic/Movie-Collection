@@ -12,6 +12,7 @@ Tasks:
 -genre name not ID  
 -connect index.blade and uselist.blade into one and through controller send  
 send different data  
+-set default image 
 ...  
 
 
